@@ -7,15 +7,15 @@ apt install bspwm sxhkd rxvt-unicode feh rofi zsh curl vim
 
 echo "Copying config ... "
 
-cp -r bspwm ~/.config
-cp -r sxhkd ~/.config
-cp -r .vim ~/
-cp .Xresources ~
+cp -r bspwm /home/stephane/.config
+cp -r sxhkd /home/stephane/.config
+cp -r .vim /home/stephane/
+cp .Xresources /home/stephane
 
-chmod +x ~/.config/bspwm/bspwmrc
-chmod +x ~/.config/sxhkd/sxhkdrc
+chmod +x /home/stephane/.config/bspwm/bspwmrc
+chmod +x /home/stephane/.config/sxhkd/sxhkdrc
 
-cp -r wallpapers/ ~/.wallpapers
+cp -r wallpapers/ /home/stephane/.wallpapers
 
 
  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
