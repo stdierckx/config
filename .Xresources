@@ -34,3 +34,9 @@ urxvt.color14:      #8abeb7
 ! white
 urxvt.color7:       #707880
 urxvt.color15:      #c5c8c6
+
+
+urxvt.scrollBar:     false
+urxvt.transparent:   false
+urxvt.shading:       20
+urxvt.font: xft:Ubuntu Mono:size=14:antialias=true
