@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show run
+	~/.config/rofi/bin/launcher_text
 
 # window chooser launcher
 super + BackSpace
