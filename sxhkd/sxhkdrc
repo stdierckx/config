@@ -8,15 +8,12 @@ super + Return
 
 # program launcher
 super + @space
-	~/.config/rofi/bin/launcher_text
+	dmenu_run -b
 
 # window chooser launcher
 super + BackSpace
 	rofi -show window
 
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd
 
 #
 # bspwm hotkeys
@@ -43,6 +40,36 @@ super + g
 	bspc node -s biggest.window
 
 #
+# focus/swap
+#
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the next/previous node in the current desktop
+super + {_,shift + }c
+	bspc node -f {next,prev}.local
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the older or newer node in the focus history
+super + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+
+#
 # state/flags
 #
 
@@ -61,10 +88,4 @@ super + shift + r
 # move current window to another workspace and follow it
 super + shift + {1-9,0}
     bspc node -d '^{1-9,10}' --follow
-
-# resize windows
-#super + s : {h,j,k,l}
-    #STEP=20; SELECTION={1,2,3,4}; \
-    #bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
-    #bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
 
