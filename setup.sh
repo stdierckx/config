@@ -3,17 +3,19 @@
 echo "Thalos dev environment installer " && sleep 5
 echo "Installing Dependencies ... "
 
-apt install bspwm sxhkd rxvt-unicode feh rofi zsh curl vim
+apt install bspwm sxhkd rxvt-unicode feh rofi zsh curl vim polybar
 
 echo "Copying config ... "
 
 cp -r bspwm /home/stephane/.config
 cp -r sxhkd /home/stephane/.config
+cp -r polybar /home/stephane/.config
 cp -r .vim /home/stephane/
 cp .Xresources /home/stephane
 
 chmod +x /home/stephane/.config/bspwm/bspwmrc
 chmod +x /home/stephane/.config/sxhkd/sxhkdrc
+chmod +x /home/stephane/.config/polybar/launch.sh
 
 cp -r wallpapers/ /home/stephane/.wallpapers
 
