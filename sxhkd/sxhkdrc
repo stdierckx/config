@@ -2,9 +2,6 @@
 # wm independent hotkeys
 #
 
-super + b
-	vim ~/.config/bspwm/bspwmrc
-
 # terminal emulator
 super + Return
 	urxvt
@@ -49,6 +46,10 @@ super + g
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-# set the node flags
-super + ctrl + {m,x,y,z}
-d
+# call rofi run
+super + r
+	rofi -show run
+
+# reload sxhkdrc
+super + shift + r
+    pkill -usr1 -x sxhkd; notify-send 'sxhkd' 'Reloaded config'
