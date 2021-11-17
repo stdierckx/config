@@ -9,6 +9,7 @@ echo "Copying config ... "
 
 cp -r bspwm ~/.config
 cp -r sxhkd ~/.config
+cp -r .vim ~/
 cp .Xresources ~
 
 chmod +x ~/.config/bspwm/bspwmrc

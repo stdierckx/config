@@ -1,6 +1,7 @@
 
 cp -r ~/.config/bspwm .
 cp -r ~/.config/sxhkd .
+cp -r ~/.vim .
 
 cp ~/.Xresources .
 
