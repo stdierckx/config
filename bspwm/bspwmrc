@@ -1,6 +1,6 @@
 #! /bin/sh
 
-feh --bg-center ~/Pictures/palm-wallpaper.jpg
+feh --bg-center ~/.wallpapers/palm-wallpaper.jpg
 
 pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/sxhkd/sxhkdrc &
 

@@ -8,7 +8,11 @@ super + Return
 
 # program launcher
 super + @space
-	dmenu_run
+	rofi -show run
+
+# window chooser launcher
+super + BackSpace
+	rofi -show window
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -59,8 +63,8 @@ super + shift + {1-9,0}
     bspc node -d '^{1-9,10}' --follow
 
 # resize windows
-super + s : {h,j,k,l}
-    STEP=20; SELECTION={1,2,3,4}; \
-    bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
-    bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
+#super + s : {h,j,k,l}
+    #STEP=20; SELECTION={1,2,3,4}; \
+    #bspc node -z $(echo "left -$STEP 0,bottom 0 $STEP,top 0 -$STEP,right $STEP 0" | cut -d',' -f$SELECTION) || \
+    #bspc node -z $(echo "right -$STEP 0,top 0 $STEP,bottom 0 -$STEP,left $STEP 0" | cut -d',' -f$SELECTION)
 
