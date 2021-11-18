@@ -109,3 +109,13 @@ source $ZSH/oh-my-zsh.sh
 #
 export PATH=$HOME/.config/rofi/bin:$PATH
 export VIRTUAL_ENV_DISABLE_PROMPT=0
+
+alias configzsh="vim ~/.zshrc"
+alias configohmyzsh="vim ~/.oh-my-zsh"
+alias configbspwm="vim ~/.config/bspwm/bspwmrc"
+alias configsxhkd="vim ~/.config/sxhkd/sxhkdrc"
+alias configpolybar="vim ~/.config/polybar/config"
+alias reloadzsh="source ~/.zshrc"
+alias activatevenv="source .venv/bin/activate && source ~/.zshrc"
+alias deactivatevenv="deactivate && source ~/.zshrc"
+
