@@ -116,6 +116,5 @@ alias configbspwm="vim ~/.config/bspwm/bspwmrc"
 alias configsxhkd="vim ~/.config/sxhkd/sxhkdrc"
 alias configpolybar="vim ~/.config/polybar/config"
 alias reloadzsh="source ~/.zshrc"
-alias activatevenv="source .venv/bin/activate && source ~/.zshrc"
-alias deactivatevenv="deactivate && source ~/.zshrc"
-
+alias activatevenv="source .venv/bin/activate && source ~/.zshrc" alias deactivatevenv="deactivate && source ~/.zshrc"
+alias teams="google-chrome \"https://teams.microsoft.com/_#/conversations/General\" &> /dev/null &" 

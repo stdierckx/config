@@ -10,6 +10,12 @@ super + Return
 super + @space
 	dmenu_run -b
 
+super + backslash
+	urxvt -e ranger
+
+super + apostrophe
+	urxvt -e htop
+
 # window chooser launcher
 super + BackSpace
 	rofi -show window
