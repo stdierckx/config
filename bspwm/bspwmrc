@@ -1,10 +1,16 @@
-#! /bin/sh
+#! /usr/bin/zsh
 
-#feh --bg-center ~/.wallpapers/palm-wallpaper.jpg
+#feh --bg-center ~/.wallpapers/bg-waterdrops.jpg
+
+if [[ -n "$(xrandr -q | grep 'HDMI-A-0 connected')" ]] 
+then
+	xrandr --output eDP --primary --mode 1920x1080 --rotate normal --output HDMI-A-0 --mode 3440x1440 --rotate normal --left-of eDP
+fi
 
 pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/sxhkd/sxhkdrc &
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor eDP -d 1 2 3 4 5
+bspc monitor HDMI-A-0 -d 6 7 8 9 10
 
 bspc config border_width        2 
 bspc config window_gap          8
