@@ -39,4 +39,4 @@ urxvt.color15:      #c5c8c6
 urxvt.scrollBar:     false
 urxvt.transparent:   true
 urxvt.shading:       20
-urxvt.font: xft:Ubuntu Mono:size=14:antialias=true
+urxvt.font: xft:Source Code Pro for Powerline:size=14:antialias=true

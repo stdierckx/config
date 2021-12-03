@@ -1,26 +1,18 @@
 #! /usr/bin/zsh
 
-#feh --bg-center ~/.wallpapers/bg-waterdrops.jpg
-
-if [[ -n "$(xrandr -q | grep 'HDMI-A-0 connected')" ]] 
-then
-	xrandr --output eDP --primary --mode 1920x1080 --rotate normal --output HDMI-A-0 --mode 3440x1440 --rotate normal --left-of eDP
-fi
-
 pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/sxhkd/sxhkdrc &
 
-bspc monitor eDP -d 1 2 3 4 5
-bspc monitor HDMI-A-0 -d 6 7 8 9 10
+bspc monitor eDP -d web1 code1 term1 image1 music1 mail1
+bspc monitor HDMI-A-0 -d web2 code2 term2 image2 mail2
 
-bspc config border_width        2 
-bspc config window_gap          8
+bspc config border_width        0 
+bspc config window_gap          16
 bspc config top_padding         0
 bspc config bottom_padding      0
 
-bspc config split_ratio          0.5
+bspc config split_ratio          0.55
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
 # AUTOSTART
-$HOME/.config/polybar/launch.sh
-
+startup

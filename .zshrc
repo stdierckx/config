@@ -88,6 +88,9 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
+export VISUAL='nvim'
+export EDITOR='nvim'
+
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -110,12 +113,18 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$HOME/.config/rofi/bin:$PATH
 export VIRTUAL_ENV_DISABLE_PROMPT=0
 
-alias configzsh="vim ~/.zshrc"
-alias configohmyzsh="vim ~/.oh-my-zsh"
-alias configbspwm="vim ~/.config/bspwm/bspwmrc"
-alias configsxhkd="vim ~/.config/sxhkd/sxhkdrc"
-alias configpolybar="vim ~/.config/polybar/config"
-alias configpolybarlaunch="vim ~/.config/polybar/launch.sh"
+alias configzsh="nvim ~/.zshrc"
+alias configohmyzsh="nvim ~/.oh-my-zsh"
+alias configbspwm="nvim ~/.config/bspwm/bspwmrc"
+alias configsxhkd="nvim ~/.config/sxhkd/sxhkdrc"
+alias configpolybar="nvim ~/.config/polybar/config"
+alias configpolybarlaunch="nvim ~/.config/polybar/launch.sh"
 alias reloadzsh="source ~/.zshrc"
 alias activatevenv="source .venv/bin/activate && source ~/.zshrc" alias deactivatevenv="deactivate && source ~/.zshrc"
 alias teams="google-chrome \"https://teams.microsoft.com/_#/conversations/General\" &> /dev/null &" 
+alias configvim="nvim ~/.config/nvim/init.vim"
+alias vim="nvim"
+alias vimdiff="nvim -d"
+alias configstartup="nvim ~/.local/bin/startup"
+alias configrifle="nvim ~/.config/ranger/rifle.conf"
+alias configxresources="nvim ~/.Xresources"
