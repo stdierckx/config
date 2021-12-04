@@ -4,17 +4,17 @@
 
 # terminal emulator
 super + Return
-	urxvt
+	kitty
 
 # program launcher
 super + @space
 	dmenu_run -b
 
 super + backslash
-	urxvt -e ranger
+	kitty -e ranger
 
 super + apostrophe
-	urxvt -e htop
+	kitty -e htop
 
 # window chooser launcher
 super + BackSpace

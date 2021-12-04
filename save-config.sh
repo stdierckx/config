@@ -4,6 +4,7 @@ cp -r ~/.config/sxhkd .
 cp -r ~/.config/polybar .
 cp -r ~/.config/nvim .
 cp -r ~/.config/ranger .
+cp -r ~/.config/kitty .
 cp ~/.zshrc .
 cp ~/.Xresources .
 
