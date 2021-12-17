@@ -128,3 +128,6 @@ alias vimdiff="nvim -d"
 alias configstartup="nvim ~/.local/bin/startup"
 alias configrifle="nvim ~/.config/ranger/rifle.conf"
 alias configxresources="nvim ~/.Xresources"
+alias configkitty="nvim ~/.config/kitty/kitty.conf"
+
+setxkbmap -option ctrl:nocaps
